@@ -48,8 +48,8 @@ jobs:
         with:
           java-version: 11
 
-      - name: cd into dir
-        run: cd PodPlay
+      - name: pwd
+        run: pwd
 
       - name: Unit tests
         run: ./gradlew test
