@@ -33,3 +33,20 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run a log message
+        run: echo This is my job for running tests!
+
+      - uses: actions/checkout@v2
+
+      - name: set up JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11
+
+      - name: Unit tests
+        run: ./gradlew test
