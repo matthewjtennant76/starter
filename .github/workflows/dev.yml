@@ -51,5 +51,8 @@ jobs:
       - name: pwd
         run: pwd
 
+      - name: ls
+        run: ls -a
+
       - name: Unit tests
         run: ./gradlew test
